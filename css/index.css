@@ -1,0 +1,14 @@
+canvas {
+  float: left;
+  border: 1px solid black;
+  margin: 2em;
+}
+
+.field{
+  width: 7em;
+  display: inline-block;
+}
+
+.value{
+  display: inline;
+}
