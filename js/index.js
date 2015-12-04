@@ -1,24 +1,23 @@
 var REV = "3.00";
-var genomes = [];
+var canvases;
 
 $(document).ready(function(){
 
-  // get the canvas
-  var canvases = $('canvas');
+  // get the canvas elements
+  canvases = $('canvas');
+
+  $('button').click(function(){
+    //alert("CLICKED!");
+    var ratings = getRatings();
+    ga_runGeneration(ratings);
+    populateCanvases();
+  });
 
   $('canvas').dblclick(function(){
       var id = this.id;
       id = id.slice(1, id.length);
 
-      /*c = this;
-      ctx = c.getContext('2d');
-      transformReset(c, ctx);
-      ctx.globalAlpha = 0.5;
-      ctx.fillStyle = "#00FF00";
-      ctx.rect(0, 0, c.width, c.height);
-      ctx.fill();*/
-
-      var params = genomes[id];
+      var params = organism[id];
       alert("Selected face " + id + "\n" +
         "Face type = " + params.face_id + "\n" +
         "Eye type = " + params.eye_id + "\n" +
@@ -37,21 +36,42 @@ $(document).ready(function(){
     }
   }
 
+  // start gen-0 and populate canvases
+  ga_initialization();
+  populateCanvases();
+
+});
+
+function populateCanvases(){
   for(var i = 0; i < canvases.length; i++)
   {
     c = canvases[i];
     // Initaliase a 2-dimensional drawing context
     var ctx = c.getContext('2d');
 
-    //Canvas commands go here
-    ctx.font = "20px Helvetica";
-    ctx.fillText("Face " + i , 10, 20);
+    transformReset(c, ctx);
+    clearCanvas(c, ctx);
 
-    // generate the initial genotype
-    var params = randomGenotype();
-    genomes[i] = params;
+    //Canvas commands go here
+    ctx.fillStyle = "#000000";
+    ctx.font = "20px Helvetica";
+    ctx.fillText("org(" + gen_number + ", " + i + ")" , 10, 20);
+
+    // get params from organism genotype
+    var params = organism[i];
 
     // draw face
     drawFace(c, ctx, params);
   }
-});
+}
+
+function getRatings(){
+  var ratings = [];
+
+  $(".panel").each(function(index) {
+    var rating = $(this).find("form input:checked").val() || "0";
+    ratings[index] = rating;
+  });
+
+  return ratings;
+}

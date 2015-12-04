@@ -11,23 +11,166 @@
 </head>
 <body>
   <h1>Face Drawing - Genetic Algorithm Test</h1>
-  <canvas id="c0" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c1" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c2" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c3" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c4" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c5" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
+
+  <div>
+    <p>Welcome! This is the page for my project on face generation and genetic algorithms.</p>
+    <p>This program draws a series of faces. Rate all the faces on their attractiveness, then click "Next Generation" at the bottom of the page.</p>
+    <p>Using a variant of the Simple Genetic Algorithm (SGA), this program will create new generations of faces passing along favorable elements.</p>
+    <p>Give it a shot!</p>
+
+  </div>
+
+  <div class="panel">
+    <canvas id="c0" width="250" height="250">
+      <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <form class = "rating">
+      (not)
+      <input type="radio" name="rating" value="1">1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3" checked>3
+      <input type="radio" name="rating" value="4">4
+      <input type="radio" name="rating" value="5">5 (hot)
+    </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c1" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c2" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c3" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c4" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c5" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+    <canvas id="c6" width="250" height="250">
+      <p>Your browser doesn't support canvas.</p>
+    </canvas>
+    <form class = "rating">
+      (not)
+      <input type="radio" name="rating" value="1">1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3" checked>3
+      <input type="radio" name="rating" value="4">4
+      <input type="radio" name="rating" value="5">5 (hot)
+    </form>
+  </div>
+
+  <div class="panel">
+    <canvas id="c7" width="250" height="250"></canvas>
+    <form class = "rating">
+      (not)
+      <input type="radio" name="rating" value="1">1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3" checked>3
+      <input type="radio" name="rating" value="4">4
+      <input type="radio" name="rating" value="5">5 (hot)
+    </form>
+  </div>
+
+  <div class="panel">
+    <canvas id="c8" width="250" height="250"></canvas>
+    <form class = "rating">
+      (not)
+      <input type="radio" name="rating" value="1">1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3" checked>3
+      <input type="radio" name="rating" value="4">4
+      <input type="radio" name="rating" value="5">5 (hot)
+    </form>
+  </div>
+
+  <div class="panel">
+    <canvas id="c9" width="250" height="250"></canvas>
+    <form class = "rating">
+      (not)
+      <input type="radio" name="rating" value="1">1
+      <input type="radio" name="rating" value="2">2
+      <input type="radio" name="rating" value="3" checked>3
+      <input type="radio" name="rating" value="4">4
+      <input type="radio" name="rating" value="5">5 (hot)
+    </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c10" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="panel">
+  <canvas id="c11" width="250" height="250"></canvas>
+  <form class = "rating">
+    (not)
+    <input type="radio" name="rating" value="1">1
+    <input type="radio" name="rating" value="2">2
+    <input type="radio" name="rating" value="3" checked>3
+    <input type="radio" name="rating" value="4">4
+    <input type="radio" name="rating" value="5">5 (hot)
+  </form>
+  </div>
+
+  <div class="genButton">
+    <button>NEXT GENERATION</button>
+  </div>
+
   </body>
 </html>
