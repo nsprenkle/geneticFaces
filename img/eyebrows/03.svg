@@ -25,7 +25,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-972.3622)"
      id="layer1">
     <path
@@ -42,7 +42,7 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:9.60000038;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer16">
     <path
        id="path12167"

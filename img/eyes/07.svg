@@ -55,7 +55,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer4">
     <g
        style="display:inline"
@@ -156,7 +156,7 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer9">
     <g
        transform="matrix(2.6363837,0,0,2.6363837,369.70289,-195.10334)"

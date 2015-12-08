@@ -27,16 +27,39 @@ canvas {
   margin: 0 0 0 2em;
 }
 
+.check {
+  color: green;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.cross {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
 .genButton {
   clear: both;
 }
 
-.genButton > button{
+.genButton > button {
   margin: 2em;
   color: white;
   background-color: green;
   padding: 1em 2em 1em 2em;
   font-family: sans;
   font-weight: bold;
-  border: 0px;
+  border: .1em solid green;
+  border-radius: 1em;
+}
+
+.genButton > button:hover {
+  background-color: lightGreen;
+  color:green;
+}
+
+.genButton > button:active {
+  background-color: darkGreen;
+  color: white;
 }
