@@ -5,29 +5,140 @@
   <title>Face Test</title>
   <link href="css/index.css" rel="stylesheet">
   <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/help-funcs.js"></script>
+  <script src="js/drawing-funcs.js"></script>
   <script src="js/genetic-funcs.js"></script>
   <script src="js/index.js"></script>
 </head>
 <body>
   <h1>Face Drawing - Genetic Algorithm Test</h1>
-  <canvas id="c0" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c1" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c2" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c3" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c4" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  <canvas id="c5" width="250" height="250">
-    <p>Your browser doesn't support canvas.</p>
-  </canvas>
-  </body>
+
+  <div>
+    <p>Welcome! This is the page for my project on face generation and genetic algorithms.</p>
+    <p>This program draws a series of faces. Rate all the faces on their attractiveness, then click "Next Generation" at the bottom of the page.</p>
+    <p>Using a variant of the Simple Genetic Algorithm (SGA), this program will create new generations of faces passing along favorable elements.</p>
+    <p>Give it a shot!</p>
+  </div>
+
+  <div class = "container">
+    <div class="panel">
+      <canvas id="c0" width="250" height="250">
+        <p>Your browser doesn't support canvas.</p>
+      </canvas>
+      <form class = "rating">
+        <span class="cross">&#x2717;</span>
+        <input type="range" name="rating" min="0" max="100" value="50">
+        <span class="check">&#x2713;</span>
+      </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c1" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c2" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c3" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c4" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c5" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+      <canvas id="c6" width="250" height="250">
+        <p>Your browser doesn't support canvas.</p>
+      </canvas>
+      <form class = "rating">
+        <span class="cross">&#x2717;</span>
+        <input type="range" name="rating" min="0" max="100" value="50">
+        <span class="check">&#x2713;</span>
+      </form>
+    </div>
+
+    <div class="panel">
+      <canvas id="c7" width="250" height="250"></canvas>
+      <form class = "rating">
+        <span class="cross">&#x2717;</span>
+        <input type="range" name="rating" min="0" max="100" value="50">
+        <span class="check">&#x2713;</span>
+      </form>
+    </div>
+
+    <div class="panel">
+      <canvas id="c8" width="250" height="250"></canvas>
+      <form class = "rating">
+        <span class="cross">&#x2717;</span>
+        <input type="range" name="rating" min="0" max="100" value="50">
+        <span class="check">&#x2713;</span>
+      </form>
+    </div>
+
+    <div class="panel">
+      <canvas id="c9" width="250" height="250"></canvas>
+      <form class = "rating">
+        <span class="cross">&#x2717;</span>
+        <input type="range" name="rating" min="0" max="100" value="50">
+        <span class="check">&#x2713;</span>
+      </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c10" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="panel">
+    <canvas id="c11" width="250" height="250"></canvas>
+    <form class = "rating">
+      <span class="cross">&#x2717;</span>
+      <input type="range" name="rating" min="0" max="100" value="50">
+      <span class="check">&#x2713;</span>
+    </form>
+    </div>
+
+    <div class="genButton">
+      <button>NEXT GENERATION</button>
+    </div>
+
+    <div class="licences">
+      <p>Note - Assets largely borrowed from Nintendo's Mii Creator software.</p>
+    </div>
+  </div>
+</body>
 </html>

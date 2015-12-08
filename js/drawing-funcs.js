@@ -38,7 +38,8 @@ function zeroPadTwo(input){
   return "" + input;
 }
 
-function drawFace(c, ctx, params){
+function drawFace(c, ctx, params, drawGrid){
+
   // canvas vars
   var x_max = c.width,    // x max of canvas
       y_max = c.height,   // y max of canvas
@@ -61,51 +62,58 @@ function drawFace(c, ctx, params){
   var head_top = y_max *1/7;
   var head_side = x_max * 2/13;
 
-  ctx.strokeStyle = "#BBBBBB";
+  if(drawGrid){
+    ctx.strokeStyle = "#BBBBBB";
 
-  // RATIO LINES
-  // horizontal
-  for(var i = 0; i < 8; i++){
-    ctx.moveTo(0, head_top + ((y_max - head_top * 2) * i/7));
-    ctx.lineTo(x_max, head_top + ((y_max - head_top * 2) * i/7));
+    // RATIO LINES
+    // horizontal
+    for(var i = 0; i < 8; i++){
+      ctx.moveTo(0, head_top + ((y_max - head_top * 2) * i/7));
+      ctx.lineTo(x_max, head_top + ((y_max - head_top * 2) * i/7));
+    }
+    // vertical
+    for(var i = 0; i < 6; i++){
+      ctx.moveTo(head_side + ((x_max - head_side * 2) * i/5), 0);
+      ctx.lineTo(head_side + ((x_max - head_side * 2) * i/5), y_max);
+    }
+    // center
+    ctx.moveTo(x_mid, 0);
+    ctx.lineTo(x_mid, y_max);
+    ctx.moveTo(0, y_mid);
+    ctx.lineTo(x_max, y_mid);
+    ctx.stroke();
   }
-  // vertical
-  for(var i = 0; i < 6; i++){
-    ctx.moveTo(head_side + ((x_max - head_side * 2) * i/5), 0);
-    ctx.lineTo(head_side + ((x_max - head_side * 2) * i/5), y_max);
-  }
-  // center
-  ctx.moveTo(x_mid, 0);
-  ctx.lineTo(x_mid, y_max);
-  ctx.moveTo(0, y_mid);
-  ctx.lineTo(x_max, y_mid);
-  ctx.stroke();
+
+  var canvSize = Math.min(c.width, c.height);
 
   // FACE
   // source images are 1000x1000
-  var face_width = x_max, //params.face_width,
-      face_height = y_max;//face_width * (1 + face_wh_ratio/100); //params.face_height;
+  var face_width = canvSize * 6/8 , //params.face_width,
+      face_height = face_width, //face_width * (1 + face_wh_ratio/100); //params.face_height;
+      face_y_offset = canvSize * 1/30;
+
+  var eyeline = face_height * 4/10;   // 4/10 from top
 
   // EYES
-  // source images are 100x100
-  var eye_width = x_max * 1/6,
-      eye_height = x_max * 1/6,
-      eye_tilt = 0, // +/- radians
-      eye_x_offset = x_max * 1/5,//x_max * 1/15,
-      eye_y_offset = 0;//y_max * 1/7;
+  // source images are 150x100
+  var eye_width = face_width * 1/7,
+      eye_height = 2/3 * eye_width,
+      //eye_tilt = 0,
+      eye_x_offset = x_max * 1/7,
+      eye_y_offset = 0;//(face_height * 1/2 - eyeline);//0;
 
   // EYEBROWS
-  // ----
+  // source images are 120 x 80 - anchored at bottom corner
   var brow_width = x_max * 1/6,
       brow_height = x_max * 1/6,
-      brow_tilt = 0,
+      //brow_tilt = 0,
       brow_x_offset = eye_x_offset,
-      brow_y_offset = eye_y_offset + y_max * 1/12;
+      brow_y_offset = eye_y_offset + y_max * 1/9;
 
   // NOSE
-  // source images are 100x100
-  var nose_width = x_max * 1/5,
-      nose_height = y_max * 1/5,
+  // source images are 100x150
+  var nose_width = x_max * 1/7,
+      nose_height = y_max * 3/14,
       nose_y_offset = -y_max * 1/14;
 
   // MOUTH
@@ -121,7 +129,7 @@ function drawFace(c, ctx, params){
     // draw face
     ctx.drawImage(face,
       -face_width/2,
-      -face_height/2,
+      -face_height/2 + face_y_offset,
       face_width,
       face_height
     );

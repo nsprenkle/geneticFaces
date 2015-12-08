@@ -15,7 +15,7 @@
    id="svg7752"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="03.svg">
+   sodipodi:docname="08.svg">
   <defs
      id="defs7754" />
   <sodipodi:namedview
@@ -144,7 +144,7 @@
      inkscape:groupmode="layer"
      id="layer16"
      inkscape:label="03"
-     style="display:inline"
+     style="display:none"
      transform="translate(0,-52.362222)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -210,7 +210,7 @@
      inkscape:groupmode="layer"
      id="layer21"
      inkscape:label="08"
-     style="display:none;opacity:1">
+     style="display:inline;opacity:1">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:20;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 100,385 c 0,0 3.90244,-375 400,-375 396.09754,0 400,375 400,375 0,0 -52.99345,410.99881 -75,415 -22.00654,4.00118 -325,190 -325,190 0,0 -308.99525,-183.99822 -325,-190 -16.00476,-6.00178 -75,-415 -75,-415 z"

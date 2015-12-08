@@ -55,7 +55,7 @@
     </g>
   </g>
   <g
-     style="display:inline"
+     style="display:none"
      id="layer4">
     <g
        style="display:inline"
@@ -241,7 +241,7 @@
     </g>
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      id="layer14">
     <g
        transform="matrix(1.4374497,0,0,1.4374497,-24.510493,-193.18082)"
@@ -256,7 +256,7 @@
            id="g7329">
           <path
              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-             d="m 29.238365,187.40732 c 5.15e-4,0.002 12.167861,-33.92346 44.011435,-33.54717 26.245766,0.31014 24.57024,30.5493 24.929553,30.46945"
+             d="m 29.238365,187.40732 c -0.983576,2.00803 12.167861,-33.92346 44.011435,-33.54717 26.245766,0.31014 24.57024,30.5493 24.929553,30.46945"
              id="path7317" />
           <path
              style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

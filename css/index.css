@@ -1,14 +1,65 @@
+body{
+  font-family: sans;
+}
+
 canvas {
   float: left;
   border: 1px solid black;
-  margin: 2em;
+  margin: 2em 2em 1em 2em;
 }
 
-.field{
+.field {
   width: 7em;
   display: inline-block;
 }
 
-.value{
+.value {
   display: inline;
+}
+
+.panel {
+  float:left;
+}
+
+.rating {
+  float: left;
+  clear: left;
+  margin: 0 0 0 2em;
+}
+
+.check {
+  color: green;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.cross {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.genButton {
+  clear: both;
+}
+
+.genButton > button {
+  margin: 2em;
+  color: white;
+  background-color: green;
+  padding: 1em 2em 1em 2em;
+  font-family: sans;
+  font-weight: bold;
+  border: .1em solid green;
+  border-radius: 1em;
+}
+
+.genButton > button:hover {
+  background-color: lightGreen;
+  color:green;
+}
+
+.genButton > button:active {
+  background-color: darkGreen;
+  color: white;
 }
